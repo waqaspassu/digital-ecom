@@ -20,11 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Project Overview
 
 This is ecomerce simple application. This will use the following third party libraries
- # tailwind
- # shadcn
- # zod
- # sendmail
- # stripe
+ ### tailwind
+ ### shadcn
+ ### zod
+ ### sendmail
+ ### stripe
 
 ## Deploy on Vercel
 
