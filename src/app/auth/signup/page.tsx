@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import signupImage from "./../../../../assets/signup.jpg";
+import Link from "next/link";
 
 const SignUp = () => {
   return (
@@ -40,7 +47,16 @@ const SignUp = () => {
           </div>
           <div>
             <label className="text-sm font-medium">Your country</label>
-            <Select />
+            <Select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Country" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="light">Pakistan</SelectItem>
+                <SelectItem value="dark">India</SelectItem>
+                <SelectItem value="system">Bangladesh</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
         <div className="flex gap-4 mt-5">
@@ -70,7 +86,8 @@ const SignUp = () => {
           </label>
         </div>
 
-        <Button className="mt-5">Sign Up</Button>
+        <Button className="mt-5 bg-blue-500 text-white px-4 py-2 rounded w-1/3 hover:bg-blue-600">Sign Up</Button>
+        <p>If you are already registered please < Link className="text-blue-500" href="/auth/login">Login</Link></p>
       </div>
     </div>
   );
